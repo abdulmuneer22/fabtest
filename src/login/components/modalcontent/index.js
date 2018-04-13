@@ -5,7 +5,9 @@ import {
   FlatList,
   Image,
   TouchableHighlight,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions,
+  TextInput
 } from "react-native";
 
 import Countries from "../../countries";
@@ -13,6 +15,8 @@ import Countries from "../../countries";
 import InputBox from "../InputBox";
 
 import Icon from "react-native-vector-icons/Ionicons";
+
+const window = Dimensions.get("window");
 
 export default class ModalContent extends Component {
   constructor(props) {
@@ -25,17 +29,23 @@ export default class ModalContent extends Component {
   search = text => {
     var _countriesList = [];
 
-    this.state._countries.map((itm, ind) => {
-      var tIndex = String(itm.name).indexOf(text);
+    if (text) {
+      this.state._countries.map((itm, ind) => {
+        var tIndex = String(itm.name).indexOf(text);
 
-      if (tIndex > -1) {
-        _countriesList.push(itm);
-      }
-    });
+        if (tIndex > -1) {
+          _countriesList.push(itm);
+        }
+      });
 
-    this.setState({
-      _countries: _countriesList
-    });
+      this.setState({
+        _countries: _countriesList
+      });
+    } else {
+      this.setState({
+        _countries: Countries
+      });
+    }
   };
 
   render() {
@@ -66,14 +76,25 @@ export default class ModalContent extends Component {
               }}
             >
               <Icon name="ios-search" size={20} color="black" />
-              <InputBox onChange={text => this.search(text)} />
+
+              <TextInput
+                onChangeText={(text) => this.search(text)}
+                style={{
+                  height: 40,
+                  width: window.width * 0.8,
+                  marginVertical: 20,
+                  borderBottomColor: "black",
+                  borderBottomWidth: 1
+                }}
+              />
             </View>
 
             <FlatList
               data={_countries}
               keyExtractor={(item, index) => item.code}
               renderItem={({ item }) => (
-                <View
+                <TouchableOpacity
+                  onPress={() => this.props.onSelection(item)}
                   style={{
                     flexDirection: "row",
                     paddingHorizontal: 10,
@@ -97,7 +118,7 @@ export default class ModalContent extends Component {
                   >
                     {item.name}
                   </Text>
-                </View>
+                </TouchableOpacity>
               )}
             />
           </View>

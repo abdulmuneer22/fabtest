@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 
 import InputBox from "../InputBox";
 
-const Card = ({ window, onFlagPress }) => (
+const Card = ({ window, onFlagPress , selectedCountry }) => (
   <View
     style={{
       backgroundColor: "white",
@@ -24,7 +24,7 @@ const Card = ({ window, onFlagPress }) => (
     >
       Verify Via SMS
     </Text>
-    <InputBox window={window} hasFlag={true} onFlagPress={onFlagPress} />
+    <InputBox window={window} hasFlag={true} onFlagPress={onFlagPress} selectedCountry={selectedCountry}/>
     <InputBox window={window} hasFlag={false} />
   </View>
 );

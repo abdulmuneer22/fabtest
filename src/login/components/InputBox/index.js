@@ -12,7 +12,7 @@ const defImage = require("../../../assets/india.png");
 
 const window = Dimensions.get("window");
 
-const InputBox = ({ hasFlag, onFlagPress, onChange }) => (
+const InputBox = ({ hasFlag, onFlagPress, onChange, selectedCountry }) => (
   <View
     style={{
       flexDirection: "row"
@@ -27,6 +27,7 @@ const InputBox = ({ hasFlag, onFlagPress, onChange }) => (
         borderBottomColor: "black",
         borderBottomWidth: 1
       }}
+      value={selectedCountry ? selectedCountry.name: ""}
     />
 
     {hasFlag ? (

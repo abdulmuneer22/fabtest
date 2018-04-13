@@ -61316,14 +61316,16 @@ __d(function (global, _require, module, exports, _dependencyMap) {
         });
       };
 
-      _this.onSelection = function () {
+      _this.onSelection = function (item) {
         _this.setState({
-          showModal: false
+          showModal: false,
+          selectedCountry: item
         });
       };
 
       _this.state = {
-        showModal: false
+        showModal: false,
+        selectedCountry: ""
       };
       return _this;
     }
@@ -61344,7 +61346,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 35
+              lineNumber: 37
             }
           },
           _react3.default.createElement(_reactNative.Image, {
@@ -61355,13 +61357,13 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             source: bg,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 42
+              lineNumber: 44
             }
           }),
           _react3.default.createElement(_trueButton2.default, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 50
+              lineNumber: 52
             }
           }),
           _react3.default.createElement(
@@ -61369,7 +61371,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 51
+                lineNumber: 53
               }
             },
             "OR"
@@ -61381,9 +61383,10 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                 showModal: true
               });
             },
+            selectedCountry: this.state.selectedCountry,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 52
+              lineNumber: 54
             }
           }),
           _react3.default.createElement(
@@ -61394,7 +61397,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               onRequestClose: this.closeModal,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 61
+                lineNumber: 64
               }
             },
             _react3.default.createElement(_modalcontent2.default, {
@@ -61402,7 +61405,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               onSelection: this.onSelection,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 66
+                lineNumber: 69
               }
             })
           )
@@ -61414,7 +61417,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }(_react2.Component));
 
   exports.default = Login;
-},491,[118,179,12,492,493,546,495],"src/login/index.js");
+},491,[118,179,12,492,542,545,547],"src/login/index.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -61512,7 +61515,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   exports.default = TrueButton;
-},492,[118,12,497],"src/login/components/trueButton/index.js");
+},492,[118,12,493],"src/login/components/trueButton/index.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -61536,7 +61539,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   var TabBarItemIOS = exports.TabBarItemIOS = iconSet.TabBarItemIOS;
   var ToolbarAndroid = exports.ToolbarAndroid = iconSet.ToolbarAndroid;
   var getImageSource = exports.getImageSource = iconSet.getImageSource;
-},497,[498,499],"node_modules/react-native-vector-icons/Ionicons.js");
+},493,[494,541],"node_modules/react-native-vector-icons/Ionicons.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -61792,7 +61795,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     Icon.hasIcon = hasIcon;
     return Icon;
   }
-},498,[118,179,129,500,501,502,503],"node_modules/react-native-vector-icons/lib/create-icon-set.js");
+},494,[118,179,129,495,496,538,540],"node_modules/react-native-vector-icons/lib/create-icon-set.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -61809,7 +61812,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       }
     });
   });
-},500,[12],"node_modules/react-native-vector-icons/lib/react-native.js");
+},495,[12],"node_modules/react-native-vector-icons/lib/react-native.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -61985,7 +61988,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       size: 20
     }, _temp));
   }
-},501,[118,179,511,512,505,129,500],"node_modules/react-native-vector-icons/lib/icon-button.js");
+},496,[118,179,497,498,534,129,495],"node_modules/react-native-vector-icons/lib/icon-button.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
     var baseGetTag = _require(_dependencyMap[0], './_baseGetTag'),
         isArray = _require(_dependencyMap[1], './isArray'),
@@ -61998,7 +62001,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     }
 
     module.exports = isString;
-},511,[206,248,257],"node_modules/lodash/isString.js");
+},497,[206,248,257],"node_modules/lodash/isString.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var arrayMap = _require(_dependencyMap[0], './_arrayMap'),
       baseClone = _require(_dependencyMap[1], './_baseClone'),
@@ -62040,7 +62043,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     return result;
   });
   module.exports = omit;
-},512,[290,513,514,282,309,515,507,516],"node_modules/lodash/omit.js");
+},498,[290,499,526,282,309,530,532,512],"node_modules/lodash/omit.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var Stack = _require(_dependencyMap[0], './_Stack'),
       arrayEach = _require(_dependencyMap[1], './_arrayEach'),
@@ -62183,7 +62186,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseClone;
-},513,[188,524,306,525,526,527,528,529,530,245,516,271,531,532,533,248,258,534,212,535,252],"node_modules/lodash/_baseClone.js");
+},499,[188,500,306,501,502,506,507,508,509,245,512,271,513,514,520,248,258,522,212,524,252],"node_modules/lodash/_baseClone.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   function arrayEach(array, iteratee) {
     var index = -1,
@@ -62199,7 +62202,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = arrayEach;
-},524,[],"node_modules/lodash/_arrayEach.js");
+},500,[],"node_modules/lodash/_arrayEach.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var copyObject = _require(_dependencyMap[0], './_copyObject'),
       keys = _require(_dependencyMap[1], './keys');
@@ -62209,7 +62212,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseAssign;
-},525,[309,252],"node_modules/lodash/_baseAssign.js");
+},501,[309,252],"node_modules/lodash/_baseAssign.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var copyObject = _require(_dependencyMap[0], './_copyObject'),
       keysIn = _require(_dependencyMap[1], './keysIn');
@@ -62219,7 +62222,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseAssignIn;
-},526,[309,519],"node_modules/lodash/_baseAssignIn.js");
+},502,[309,503],"node_modules/lodash/_baseAssignIn.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var arrayLikeKeys = _require(_dependencyMap[0], './_arrayLikeKeys'),
       baseKeysIn = _require(_dependencyMap[1], './_baseKeysIn'),
@@ -62230,7 +62233,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = keysIn;
-},519,[253,523,270],"node_modules/lodash/keysIn.js");
+},503,[253,504,270],"node_modules/lodash/keysIn.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var isObject = _require(_dependencyMap[0], './isObject'),
       isPrototype = _require(_dependencyMap[1], './_isPrototype'),
@@ -62257,7 +62260,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseKeysIn;
-},523,[212,267,536],"node_modules/lodash/_baseKeysIn.js");
+},504,[212,267,505],"node_modules/lodash/_baseKeysIn.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   function nativeKeysIn(object) {
     var result = [];
@@ -62272,7 +62275,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = nativeKeysIn;
-},536,[],"node_modules/lodash/_nativeKeysIn.js");
+},505,[],"node_modules/lodash/_nativeKeysIn.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var root = _require(_dependencyMap[0], './_root');
 
@@ -62294,7 +62297,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneBuffer;
-},527,[208],"node_modules/lodash/_cloneBuffer.js");
+},506,[208],"node_modules/lodash/_cloneBuffer.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   function copyArray(source, array) {
     var index = -1,
@@ -62309,7 +62312,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = copyArray;
-},528,[],"node_modules/lodash/_copyArray.js");
+},507,[],"node_modules/lodash/_copyArray.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var copyObject = _require(_dependencyMap[0], './_copyObject'),
       getSymbols = _require(_dependencyMap[1], './_getSymbols');
@@ -62319,7 +62322,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = copySymbols;
-},529,[309,249],"node_modules/lodash/_copySymbols.js");
+},508,[309,249],"node_modules/lodash/_copySymbols.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var copyObject = _require(_dependencyMap[0], './_copyObject'),
       getSymbolsIn = _require(_dependencyMap[1], './_getSymbolsIn');
@@ -62329,7 +62332,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = copySymbolsIn;
-},530,[309,518],"node_modules/lodash/_copySymbolsIn.js");
+},509,[309,510],"node_modules/lodash/_copySymbolsIn.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var arrayPush = _require(_dependencyMap[0], './_arrayPush'),
       getPrototype = _require(_dependencyMap[1], './_getPrototype'),
@@ -62348,13 +62351,13 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     return result;
   };
   module.exports = getSymbolsIn;
-},518,[247,522,249,251],"node_modules/lodash/_getSymbolsIn.js");
+},510,[247,511,249,251],"node_modules/lodash/_getSymbolsIn.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var overArg = _require(_dependencyMap[0], './_overArg');
 
   var getPrototype = overArg(Object.getPrototypeOf, Object);
   module.exports = getPrototype;
-},522,[269],"node_modules/lodash/_getPrototype.js");
+},511,[269],"node_modules/lodash/_getPrototype.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var baseGetAllKeys = _require(_dependencyMap[0], './_baseGetAllKeys'),
       getSymbolsIn = _require(_dependencyMap[1], './_getSymbolsIn'),
@@ -62365,7 +62368,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = getAllKeysIn;
-},516,[246,518,519],"node_modules/lodash/_getAllKeysIn.js");
+},512,[246,510,503],"node_modules/lodash/_getAllKeysIn.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var objectProto = Object.prototype;
   var hasOwnProperty = objectProto.hasOwnProperty;
@@ -62383,7 +62386,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = initCloneArray;
-},531,[],"node_modules/lodash/_initCloneArray.js");
+},513,[],"node_modules/lodash/_initCloneArray.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var cloneArrayBuffer = _require(_dependencyMap[0], './_cloneArrayBuffer'),
       cloneDataView = _require(_dependencyMap[1], './_cloneDataView'),
@@ -62455,7 +62458,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = initCloneByTag;
-},532,[538,539,540,541,542],"node_modules/lodash/_initCloneByTag.js");
+},514,[515,516,517,518,519],"node_modules/lodash/_initCloneByTag.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var Uint8Array = _require(_dependencyMap[0], './_Uint8Array');
 
@@ -62466,7 +62469,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneArrayBuffer;
-},538,[241],"node_modules/lodash/_cloneArrayBuffer.js");
+},515,[241],"node_modules/lodash/_cloneArrayBuffer.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var cloneArrayBuffer = _require(_dependencyMap[0], './_cloneArrayBuffer');
 
@@ -62476,7 +62479,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneDataView;
-},539,[538],"node_modules/lodash/_cloneDataView.js");
+},516,[515],"node_modules/lodash/_cloneDataView.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var reFlags = /\w*$/;
 
@@ -62487,7 +62490,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneRegExp;
-},540,[],"node_modules/lodash/_cloneRegExp.js");
+},517,[],"node_modules/lodash/_cloneRegExp.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var Symbol = _require(_dependencyMap[0], './_Symbol');
 
@@ -62499,7 +62502,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneSymbol;
-},541,[207],"node_modules/lodash/_cloneSymbol.js");
+},518,[207],"node_modules/lodash/_cloneSymbol.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var cloneArrayBuffer = _require(_dependencyMap[0], './_cloneArrayBuffer');
 
@@ -62509,7 +62512,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneTypedArray;
-},542,[538],"node_modules/lodash/_cloneTypedArray.js");
+},519,[515],"node_modules/lodash/_cloneTypedArray.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
     var baseCreate = _require(_dependencyMap[0], './_baseCreate'),
         getPrototype = _require(_dependencyMap[1], './_getPrototype'),
@@ -62520,7 +62523,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     }
 
     module.exports = initCloneObject;
-},533,[543,522,267],"node_modules/lodash/_initCloneObject.js");
+},520,[521,511,267],"node_modules/lodash/_initCloneObject.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var isObject = _require(_dependencyMap[0], './isObject');
 
@@ -62546,7 +62549,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }();
 
   module.exports = baseCreate;
-},543,[212],"node_modules/lodash/_baseCreate.js");
+},521,[212],"node_modules/lodash/_baseCreate.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var baseIsMap = _require(_dependencyMap[0], './_baseIsMap'),
       baseUnary = _require(_dependencyMap[1], './_baseUnary'),
@@ -62555,7 +62558,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   var nodeIsMap = nodeUtil && nodeUtil.isMap;
   var isMap = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;
   module.exports = isMap;
-},534,[544,264,265],"node_modules/lodash/isMap.js");
+},522,[523,264,265],"node_modules/lodash/isMap.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var getTag = _require(_dependencyMap[0], './_getTag'),
       isObjectLike = _require(_dependencyMap[1], './isObjectLike');
@@ -62567,7 +62570,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseIsMap;
-},544,[271,257],"node_modules/lodash/_baseIsMap.js");
+},523,[271,257],"node_modules/lodash/_baseIsMap.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var baseIsSet = _require(_dependencyMap[0], './_baseIsSet'),
       baseUnary = _require(_dependencyMap[1], './_baseUnary'),
@@ -62576,7 +62579,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   var nodeIsSet = nodeUtil && nodeUtil.isSet;
   var isSet = nodeIsSet ? baseUnary(nodeIsSet) : baseIsSet;
   module.exports = isSet;
-},535,[545,264,265],"node_modules/lodash/isSet.js");
+},524,[525,264,265],"node_modules/lodash/isSet.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var getTag = _require(_dependencyMap[0], './_getTag'),
       isObjectLike = _require(_dependencyMap[1], './isObjectLike');
@@ -62588,7 +62591,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseIsSet;
-},545,[271,257],"node_modules/lodash/_baseIsSet.js");
+},525,[271,257],"node_modules/lodash/_baseIsSet.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var castPath = _require(_dependencyMap[0], './_castPath'),
       last = _require(_dependencyMap[1], './last'),
@@ -62602,7 +62605,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseUnset;
-},514,[282,520,521,291],"node_modules/lodash/_baseUnset.js");
+},526,[282,527,528,291],"node_modules/lodash/_baseUnset.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   function last(array) {
     var length = array == null ? 0 : array.length;
@@ -62610,7 +62613,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = last;
-},520,[],"node_modules/lodash/last.js");
+},527,[],"node_modules/lodash/last.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var baseGet = _require(_dependencyMap[0], './_baseGet'),
       baseSlice = _require(_dependencyMap[1], './_baseSlice');
@@ -62620,7 +62623,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = parent;
-},521,[281,537],"node_modules/lodash/_parent.js");
+},528,[281,529],"node_modules/lodash/_parent.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   function baseSlice(array, start, end) {
     var index = -1,
@@ -62648,7 +62651,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseSlice;
-},537,[],"node_modules/lodash/_baseSlice.js");
+},529,[],"node_modules/lodash/_baseSlice.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var isPlainObject = _require(_dependencyMap[0], './isPlainObject');
 
@@ -62657,7 +62660,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = customOmitClone;
-},515,[517],"node_modules/lodash/_customOmitClone.js");
+},530,[531],"node_modules/lodash/_customOmitClone.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var baseGetTag = _require(_dependencyMap[0], './_baseGetTag'),
       getPrototype = _require(_dependencyMap[1], './_getPrototype'),
@@ -62686,7 +62689,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = isPlainObject;
-},517,[206,522,257],"node_modules/lodash/isPlainObject.js");
+},531,[206,511,257],"node_modules/lodash/isPlainObject.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var flatten = _require(_dependencyMap[0], './flatten'),
       overRest = _require(_dependencyMap[1], './_overRest'),
@@ -62697,7 +62700,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = flatRest;
-},507,[509,312,314],"node_modules/lodash/_flatRest.js");
+},532,[533,312,314],"node_modules/lodash/_flatRest.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var baseFlatten = _require(_dependencyMap[0], './_baseFlatten');
 
@@ -62707,7 +62710,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = flatten;
-},509,[326],"node_modules/lodash/flatten.js");
+},533,[326],"node_modules/lodash/flatten.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var basePick = _require(_dependencyMap[0], './_basePick'),
       flatRest = _require(_dependencyMap[1], './_flatRest');
@@ -62716,7 +62719,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     return object == null ? {} : basePick(object, paths);
   });
   module.exports = pick;
-},505,[506,507],"node_modules/lodash/pick.js");
+},534,[535,532],"node_modules/lodash/pick.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var basePickBy = _require(_dependencyMap[0], './_basePickBy'),
       hasIn = _require(_dependencyMap[1], './hasIn');
@@ -62728,7 +62731,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = basePick;
-},506,[508,292],"node_modules/lodash/_basePick.js");
+},535,[536,292],"node_modules/lodash/_basePick.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
     var baseGet = _require(_dependencyMap[0], './_baseGet'),
         baseSet = _require(_dependencyMap[1], './_baseSet'),
@@ -62752,7 +62755,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     }
 
     module.exports = basePickBy;
-},508,[281,510,282],"node_modules/lodash/_basePickBy.js");
+},536,[281,537,282],"node_modules/lodash/_basePickBy.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var assignValue = _require(_dependencyMap[0], './_assignValue'),
       castPath = _require(_dependencyMap[1], './_castPath'),
@@ -62792,7 +62795,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseSet;
-},510,[306,282,260,212,291],"node_modules/lodash/_baseSet.js");
+},537,[306,282,260,212,291],"node_modules/lodash/_baseSet.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -62928,7 +62931,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       iconSize: 30
     }, _temp));
   }
-},502,[118,179,504,505,129,500],"node_modules/react-native-vector-icons/lib/tab-bar-item-ios.js");
+},538,[118,179,539,534,129,495],"node_modules/react-native-vector-icons/lib/tab-bar-item-ios.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var baseIsEqual = _require(_dependencyMap[0], './_baseIsEqual');
 
@@ -62937,7 +62940,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }
 
   module.exports = isEqual;
-},504,[232],"node_modules/lodash/isEqual.js");
+},539,[232],"node_modules/lodash/isEqual.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -63128,7 +63131,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       iconSize: 24
     }, _temp));
   }
-},503,[118,179,504,505,129,500],"node_modules/react-native-vector-icons/lib/toolbar-android.js");
+},540,[118,179,539,534,129,495],"node_modules/react-native-vector-icons/lib/toolbar-android.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = {
     "ios-add": 61698,
@@ -64066,7 +64069,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     "md-wine": 62377,
     "md-woman": 62378
   };
-},499,[],"node_modules/react-native-vector-icons/glyphmaps/Ionicons.json");
+},541,[],"node_modules/react-native-vector-icons/glyphmaps/Ionicons.json");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -64087,7 +64090,8 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var Card = function Card(_ref) {
     var window = _ref.window,
-        onFlagPress = _ref.onFlagPress;
+        onFlagPress = _ref.onFlagPress,
+        selectedCountry = _ref.selectedCountry;
     return _react2.default.createElement(
       _reactNative.View,
       {
@@ -64124,6 +64128,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
         window: window,
         hasFlag: true,
         onFlagPress: onFlagPress,
+        selectedCountry: selectedCountry,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 27
@@ -64141,7 +64146,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   exports.default = Card;
-},493,[118,12,494],"src/login/components/card/index.js");
+},542,[118,12,543],"src/login/components/card/index.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -64163,7 +64168,8 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   var InputBox = function InputBox(_ref) {
     var hasFlag = _ref.hasFlag,
         onFlagPress = _ref.onFlagPress,
-        onChange = _ref.onChange;
+        onChange = _ref.onChange,
+        selectedCountry = _ref.selectedCountry;
     return _react2.default.createElement(
       _reactNative.View,
       {
@@ -64186,6 +64192,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
           borderBottomColor: "black",
           borderBottomWidth: 1
         },
+        value: selectedCountry ? selectedCountry.name : "",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 21
@@ -64204,7 +64211,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 34
           }
         },
         _react2.default.createElement(_reactNative.Image, {
@@ -64215,7 +64222,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
           source: defImage,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43
+            lineNumber: 44
           }
         })
       ) : null
@@ -64223,7 +64230,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   exports.default = InputBox;
-},494,[118,12,547],"src/login/components/InputBox/index.js");
+},543,[118,12,544],"src/login/components/InputBox/index.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
    module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
       "__packager_asset": true,
@@ -64235,7 +64242,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       "name": "india",
       "type": "png"
    });
-},547,[164],"src/assets/india.png");
+},544,[164],"src/assets/india.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -64294,6 +64301,8 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     };
   }
 
+  var window = _reactNative.Dimensions.get("window");
+
   var ModalContent = _wrapComponent("ModalContent")(function (_Component) {
     _inherits(ModalContent, _Component);
 
@@ -64305,17 +64314,23 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       _this.search = function (text) {
         var _countriesList = [];
 
-        _this.state._countries.map(function (itm, ind) {
-          var tIndex = String(itm.name).indexOf(text);
+        if (text) {
+          _this.state._countries.map(function (itm, ind) {
+            var tIndex = String(itm.name).indexOf(text);
 
-          if (tIndex > -1) {
-            _countriesList.push(itm);
-          }
-        });
+            if (tIndex > -1) {
+              _countriesList.push(itm);
+            }
+          });
 
-        _this.setState({
-          _countries: _countriesList
-        });
+          _this.setState({
+            _countries: _countriesList
+          });
+        } else {
+          _this.setState({
+            _countries: _countries3.default
+          });
+        }
       };
 
       _this.state = {
@@ -64341,7 +64356,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 44
+              lineNumber: 54
             }
           },
           _react3.default.createElement(
@@ -64355,7 +64370,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 52
+                lineNumber: 62
               }
             },
             _react3.default.createElement(
@@ -64363,7 +64378,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 60
+                  lineNumber: 70
                 }
               },
               _react3.default.createElement(
@@ -64376,7 +64391,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                   },
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 61
+                    lineNumber: 71
                   }
                 },
                 _react3.default.createElement(_Ionicons2.default, {
@@ -64385,16 +64400,23 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                   color: "black",
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 68
+                    lineNumber: 78
                   }
                 }),
-                _react3.default.createElement(_InputBox2.default, {
-                  onChange: function onChange(text) {
+                _react3.default.createElement(_reactNative.TextInput, {
+                  onChangeText: function onChangeText(text) {
                     return _this2.search(text);
+                  },
+                  style: {
+                    height: 40,
+                    width: window.width * 0.8,
+                    marginVertical: 20,
+                    borderBottomColor: "black",
+                    borderBottomWidth: 1
                   },
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 69
+                    lineNumber: 80
                   }
                 })
               ),
@@ -64406,8 +64428,11 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                 renderItem: function renderItem(_ref) {
                   var item = _ref.item;
                   return _react3.default.createElement(
-                    _reactNative.View,
+                    _reactNative.TouchableOpacity,
                     {
+                      onPress: function onPress() {
+                        return _this2.props.onSelection(item);
+                      },
                       style: {
                         flexDirection: "row",
                         paddingHorizontal: 10,
@@ -64415,7 +64440,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                       },
                       __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 76
+                        lineNumber: 96
                       }
                     },
                     _react3.default.createElement(_reactNative.Image, {
@@ -64429,7 +64454,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                       },
                       __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 83
+                        lineNumber: 104
                       }
                     }),
                     _react3.default.createElement(
@@ -64440,7 +64465,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                         },
                         __source: {
                           fileName: _jsxFileName,
-                          lineNumber: 93
+                          lineNumber: 114
                         }
                       },
                       item.name
@@ -64449,7 +64474,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                 },
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 72
+                  lineNumber: 92
                 }
               })
             )
@@ -64462,7 +64487,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }(_react2.Component));
 
   exports.default = ModalContent;
-},546,[118,179,12,548,494,497],"src/login/components/modalcontent/index.js");
+},545,[118,179,12,546,543,493],"src/login/components/modalcontent/index.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -65198,7 +65223,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     code: "ZW"
   }];
   exports.default = countries;
-},548,[],"src/login/countries.js");
+},546,[],"src/login/countries.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
@@ -65210,7 +65235,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     "name": "asset_bg_1",
     "type": "png"
   });
-},495,[164],"src/assets/asset_bg_1.png");
+},547,[164],"src/assets/asset_bg_1.png");
 require(44);
 require(11);
 //# sourceMappingURL=index.map

@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { View, Text, Image, Dimensions, ScrollView, Modal } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  Dimensions,
+  ScrollView,
+  Modal,
+  StyleSheet
+} from "react-native";
 
 import TrueButton from "./components/trueButton";
 import Card from "./components/card";
@@ -13,7 +21,8 @@ export class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      selectedCountry: ""
     };
   }
 
@@ -23,9 +32,10 @@ export class Login extends Component {
     });
   };
 
-  onSelection = () => {
+  onSelection = item => {
     this.setState({
-      showModal: false
+      showModal: false,
+      selectedCountry: item
     });
   };
 
@@ -33,19 +43,10 @@ export class Login extends Component {
     const { showModal } = this.state;
     return (
       <ScrollView
-        contentContainerStyle={{
-          flex: 1,
-          alignItems: "center",
-          backgroundColor: "rgba(1,1,1,0.4)"
-        }}
+        keyboardShouldPersistTaps="always"
+        contentContainerStyle={styles.s_view}
       >
-        <Image
-          style={{
-            width: "100%",
-            height: 180
-          }}
-          source={bg}
-        />
+        <Image style={styles.image} source={bg} />
 
         <TrueButton />
         <Text>OR</Text>
@@ -56,6 +57,7 @@ export class Login extends Component {
               showModal: true
             })
           }
+          selectedCountry={this.state.selectedCountry}
         />
 
         <Modal
@@ -74,3 +76,15 @@ export class Login extends Component {
 }
 
 export default Login;
+
+const styles = {
+  s_view: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "rgba(1,1,1,0.4)"
+  },
+  image: {
+    width: "100%",
+    height: 180
+  }
+};
