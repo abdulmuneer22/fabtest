@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import {
   Text,
   View,
-  FlatList,
-  Image,
   TouchableHighlight,
   TouchableOpacity,
   Dimensions,
-  TextInput
+  TextInput,
+  FlatList
 } from "react-native";
 
 import Countries from "../../countries";
@@ -16,7 +15,11 @@ import InputBox from "../InputBox";
 
 import Icon from "react-native-vector-icons/Ionicons";
 
+import SingleItem from "./singleItem";
+
 const window = Dimensions.get("window");
+
+
 
 export default class ModalContent extends Component {
   constructor(props) {
@@ -78,7 +81,7 @@ export default class ModalContent extends Component {
               <Icon name="ios-search" size={20} color="black" />
 
               <TextInput
-                onChangeText={(text) => this.search(text)}
+                onChangeText={text => this.search(text)}
                 style={{
                   height: 40,
                   width: window.width * 0.8,
@@ -91,35 +94,11 @@ export default class ModalContent extends Component {
 
             <FlatList
               data={_countries}
+              // initialNumToRender={50}
+              removeClippedSubviews={true}
+              onScrollAnimationEnd={false}
               keyExtractor={(item, index) => item.code}
-              renderItem={({ item }) => (
-                <TouchableOpacity
-                  onPress={() => this.props.onSelection(item)}
-                  style={{
-                    flexDirection: "row",
-                    paddingHorizontal: 10,
-                    paddingVertical: 10
-                  }}
-                >
-                  <Image
-                    style={{
-                      width: 20,
-                      height: 20,
-                      marginRight: 10
-                    }}
-                    source={{
-                      uri: `http://www.countryflags.io/${item.code}/flat/64.png`
-                    }}
-                  />
-                  <Text
-                    style={{
-                      fontSize: 18
-                    }}
-                  >
-                    {item.name}
-                  </Text>
-                </TouchableOpacity>
-              )}
+              renderItem={({ item }) => <SingleItem item={item} />}
             />
           </View>
         </TouchableHighlight>
